@@ -1,37 +1,23 @@
 {
-  "name": "react-webpack-typescript-starter",
+  "name": "sw-assistant",
   "version": "0.1.0",
-  "description": "Starter kit for React, Webpack (with Hot Module Replacement), Typescript and Babel.",
-  "keywords": [
-    "react",
-    "webpack",
-    "typescript",
-    "babel",
-    "sass",
-    "hmr",
-    "starter",
-    "boilerplate"
-  ],
-  "author": "Viktor Persson",
   "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vikpe/react-webpack-typescript-starter.git"
+    "type": "git"
   },
-  "bugs": {
-    "url": "https://github.com/vikpe/react-webpack-typescript-starter/issues"
-  },
-  "homepage": "https://github.com/vikpe/react-webpack-typescript-starter",
   "scripts": {
-    "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
+    "build":
+      "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rm -f -r -d dist",
     "lint": "npm run lint:ts && npm run lint:sass",
     "lint:ts": "tslint './src/**/*.ts*' --format stylish --force",
     "lint:sass": "stylelint ./src/**/*.scss",
     "start": "npm run start-dev",
-    "start-dev": "webpack-dev-server --config=configs/webpack/webpack.config.js ",
+    "start-dev":
+      "webpack-dev-server --config=configs/webpack/webpack.config.js ",
     "start-prod": "npm run build && node express.js",
-    "profile": "webpack -p --config=configs/webpack/webpack.config.js--profile --json > stats.json",
+    "profile":
+      "webpack -p --config=configs/webpack/webpack.config.js--profile --json > stats.json",
     "test": "jest --watch --coverage --config=configs/jest.json",
     "webpack-defaults": "webpack-defaults"
   },

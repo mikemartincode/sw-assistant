@@ -1,0 +1,26 @@
+{
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "compilerOptions": {
+    "outDir": "lib",
+    "allowJs": true,
+    "sourceMap": true,
+    "rootDir": "src",
+    "sourceRoot": "src",
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es5",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es5", "dom", "esnext"],
+    "skipLibCheck": true,
+    "moduleResolution": "node"
+  },
+  "typeRoots": ["./types", "./node_modules/@types"],
+  "exclude": ["node_modules", "lib"]
+}

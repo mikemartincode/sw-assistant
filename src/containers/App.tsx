@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./../assets/scss/App.scss";
+import "../assets/scss/app.scss";
 
 export interface AppProps {
 }

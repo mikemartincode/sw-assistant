@@ -7,14 +7,13 @@
     "noImplicitAny": false,
     "removeComments": true,
     "experimentalDecorators": true,
-    "noLib": false,
     "jsx": "react",
     "outDir": "dist",
     "noUnusedLocals": true,
-    "types": ["node"],
     "lib": ["es6", "es7", "dom"],
-    "baseUrl": "src"
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "exclude": ["dist", "build", "node_modules"],
-  "typeRoots": ["./types", "./node_modules/@types"]
+  "exclude": ["dist", "build", "node_modules"]
 }

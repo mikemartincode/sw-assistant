@@ -6,15 +6,40 @@
     "type": "git"
   },
   "scripts": {
-    "start": "parcel ./src/index.html"
+    "start": "parcel ./src/index.html",
+    "test": "jest"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__tests__/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "<rootDir>/__tests__/__mocks__/styleMock.js"
+    },
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.tsx",
+      "src/**/*.ts",
+      "!src/**/*.d.ts"
+    ],
+    "coverageDirectory": "<rootDir>/__tests__/__coverage__/"
   },
   "devDependencies": {
+    "@types/enzyme": "^3.1.10",
     "@types/jest": "^22.2.3",
     "@types/node": "^9.4.6",
-    "@types/react": "^16.0.40",
-    "@types/react-dom": "^16.0.4",
-    "@types/react-router": "^4.0.22",
-    "@types/webpack": "^4.1.6",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.3",
     "mobx-react-devtools": "^5.0.1",
     "node-sass": "^4.9.0",
@@ -22,12 +47,11 @@
     "postcss": "^6.0.19",
     "prettier": "^1.11.1",
     "react-hot-loader": "^4.0.0",
-    "style-loader": "^0.21.0",
-    "ts-loader": "^4.0.0",
-    "typescript": "^2.7.2",
-    "url-loader": "^1.0.0-beta.0"
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.7.2"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.108",
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
     "@types/react-hot-loader": "^4.1.0",
@@ -42,7 +66,8 @@
     "react-loadable": "^5.4.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-virtualized": "^9.18.5"
+    "react-virtualized": "^9.18.5",
+    "scss": "^0.2.4"
   },
   "postcss": {}
 }

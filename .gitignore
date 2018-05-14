@@ -2,7 +2,8 @@
 dist/
 /node_modules/
 src/**/*.jsx
-tests/__coverage__/
 tests/**/*.jsx
 /lib
 .cache
+/__tests__/__coverage__/
+/__coverage__/

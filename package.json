@@ -32,7 +32,7 @@
       "src/**/*.ts",
       "!src/**/*.d.ts"
     ],
-    "coverageDirectory": "<rootDir>/__tests__/__coverage__/"
+    "coverageDirectory": "<rootDir>/__tests__/coverage/"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.10",
